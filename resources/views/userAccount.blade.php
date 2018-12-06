@@ -56,7 +56,6 @@ Account
         temp = parseInt(dates[i].getHours());
         datasetHours[temp] += 1;
         temp = parseInt(sectors[i]);
-        console.log(temp);
         datasetSectors[temp] += 1;
     } 
     var chart = new Chart(ctx, {
@@ -65,12 +64,6 @@ Account
             labels: [ "0-1", "1-2", "2-3", "3-4", "4-5", "5-6","6-7", "7-8", "8-9", "9-10","10-11", "11-12", "12-13", "13-14", "15-16", "16-17", "17-18", "18-19", "19-20", "20-21", "21-22", "22-23", "23-0"],
             datasets: [{
                 data: datasetHours,
-                backgroundColor: [
-                    //'rgba(255, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                //'rgba(255,99,132,1)'
-                ],
                 borderWidth: 1
             }]
         },
@@ -79,17 +72,17 @@ Account
         legend: {
             display: false
         },
-            scales: {
-                yAxes: [{
-                    barThickness: 53,
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }],
-                xAxes: [{
-                    barThickness: 13
-                }]
-            }
+        scales: {
+            yAxes: [{
+                barThickness: 53,
+                ticks: {
+                    beginAtZero:true
+                }
+            }],
+            xAxes: [{
+                barThickness: 13
+            }]
+        }
         }
     });
     var myRadarChart = new Chart(ctx2, {
@@ -104,14 +97,6 @@ Account
             maintainAspectRatio: false,
             legend: {
                 display: false
-            },
-            layout: {
-                padding: {
-                        left: 50,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
             }
         }
     });
